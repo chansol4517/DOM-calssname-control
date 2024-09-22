@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자스 필수패턴 13- 돔 요소에 클래스명 제어</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <article></article>
+
+    <button>클래스명 추가</button>
+    <button>클래스명 제거</button>
+    <button>클래스명 토글</button>
+
+    <script>
+      const box = document.querySelector("article");
+      const btns = document.querySelectorAll("button");
+      //활성화(on)
+      btns[0].addEventListener("click", () => {
+        box.classList.add("on");
+      });
+      //제거(remove)
+      btns[1].addEventListener("click", () => {
+        box.classList.remove("on");
+      });
+
+      btns[2].addEventListener("click", () => {
+        box.classList.toggle("on");
+      });
+      /*
+    btns[2].addEventListener('click', () => {
+      let isOn = box.classList.contains('on');
+      if (isOn) box.classList.remove('on');
+      else box.classList.add('on');
+    })
+    */
+    </script>
+  </body>
+</html>
